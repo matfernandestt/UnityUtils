@@ -120,6 +120,13 @@ public class Utilities
         var path = @"..\\";
         Process.Start(path + "/open_repository");
     }
+	
+	[MenuItem("Tools/Inspector Lock _#b")] // Shift + B
+    public static void InspectorLock()
+    {
+        ActiveEditorTracker.sharedTracker.isLocked = !ActiveEditorTracker.sharedTracker.isLocked;
+        ActiveEditorTracker.sharedTracker.ForceRebuild();
+    }
 
     [MenuItem("Tools/Show in explorer &_c")] // Alt + C
     public static void ShowInExplorer()
