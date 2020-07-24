@@ -113,6 +113,13 @@ public class Utilities
         else
             Debug.LogWarning("Reset active scene: You can only do that in Play Mode.");
     }
+	
+	[MenuItem("Tools/Open Tortoise GIT _%g", false, 10)] // Ctrl + G
+    public static void OpenTortoiseGit()
+    {
+        var path = @"..\\";
+        Process.Start(path + "/open_repository");
+    }
 
     [MenuItem("Tools/Show in explorer &_c")] // Alt + C
     public static void ShowInExplorer()
